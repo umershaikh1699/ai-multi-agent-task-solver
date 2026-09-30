@@ -1,4 +1,4 @@
-# Wand AI - Multi-Agent Task Solver
+# Multi-Agent Task Solver
 
 A powerful FastAPI service that converts natural language requests into executable multi-agent workflows. It features an intelligent Planning Agent, a robust Execution Engine, and a real-time UI.
 
