@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WandAI - Task Solver</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>WandAI Task Solver</h1>
+            <p>Describe your objective effectively, and let agents handle the rest.</p>
+        </header>
+
+        <section class="input-section">
+            <textarea id="requestInput"
+                placeholder="Describe your request... (e.g., 'Fetch todo 52 from JSONPlaceholder and extract the title')"></textarea>
+            <button id="generateBtn">Generate & Run Workflow</button>
+            <div id="errorMsg" class="error hidden"></div>
+        </section>
+
+        <section class="dashboard">
+            <div class="status-panel">
+                <h2>Current Workflow</h2>
+                <div id="workflowStatus" class="status-card hidden">
+                    <div class="status-header">
+                        <span class="label">Run ID:</span>
+                        <span id="runId" class="value monospace"></span>
+                        <span id="globalStatus" class="status-badge">PENDING</span>
+                    </div>
+                    <div class="status-meta">
+                        <div>Created: <span id="createTime"></span></div>
+                        <div>Original Request: <span id="originalRequest" class="italic"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nodes-panel">
+                <h2>Task Execution</h2>
+                <div id="nodesList" class="nodes-grid">
+                    <div class="placeholder-text">No active workflow. Submit a request to begin.</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
